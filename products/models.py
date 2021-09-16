@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class Category(models.Model):
 
     class Meta:
@@ -11,10 +11,9 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_friendly_name(self):
         return self.friendly_name
-
 
 
 class Product(models.Model):
@@ -28,6 +27,8 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
-
     def __str__(self):
         return self.name
+
+
+
